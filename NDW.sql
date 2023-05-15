@@ -1,10 +1,13 @@
+-- Drop Database if exists
+DROP DATABASE IF EXISTS NationalDataWarehouse;
+
 -- Create National Data Warehouse database
 CREATE DATABASE NationalDataWarehouse;
 USE NationalDataWarehouse;
 
 -- Create Patient table
 CREATE TABLE Patient (
-PatientID INT PRIMARY KEY,
+PatientID INT PRIMARY KEY AUTO_INCREMENT,
 PatientName VARCHAR(255),
 Gender ENUM('Male', 'Female'),
 DateOfBirth DATE,
